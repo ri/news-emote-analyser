@@ -1,0 +1,27 @@
+[
+  {
+    "name": "ABC News",
+    "url": "http://www.abc.net.au/news/",
+    "xpath": "//*[contains(@class, 'doctype-article')]//h3"
+  },
+  {
+    "name": "The Guardian",
+    "url": "https://www.theguardian.com/au",
+    "xpath": "//h2[@class='fc-item__title']"
+  },
+  {
+    "name": "Sydney Morning Herald",
+    "url": "http://www.smh.com.au/",
+    "xpath": "//*[contains(@class, 'story__headline')]"
+  },
+  {
+    "name": "news.com.au",
+    "url": "http://www.news.com.au/",
+    "xpath": "//*[contains(@class, 'story-block')]//*[contains(@class, 'heading')]/a"
+  },
+  {
+    "name": "Daily Mail",
+    "url": "http://www.dailymail.co.uk/auhome/index.html",
+    "xpath": "//*[contains(@class, 'article')]/h2"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "New York Times",
+    "url": "https://www.nytimes.com/",
+    "xpath": "//*[contains(@class, 'story-heading')]"
+  },
+  {
+    "name": "Fox News",
+    "url": "http://www.foxnews.com/",
+    "xpath":  "//*[contains(@id, 'latest')]//li//a|//*[contains(@class, 'related')]//li//a|//*[contains(@class, 'mkt-rel')]//li//a|//h3//a|//a//h3|//h1//a"
+  },
+  {
+    "name": "CNN",
+    "url": "http://us.cnn.com/",
+    "xpath": "//*[contains(@class, 'cd__headline-text')]|//*[contains(@class, 'banner-text')]"
+  },
+  {
+    "name": "Huffington Post",
+    "url": "http://www.huffingtonpost.com/?country=US",
+    "xpath": "//*[contains(@class, 'card__headline')]|//*[contains(@class, 'splash__header--title')]"
+  },
+  {
+    "name": "Wall Street Journal",
+    "url": "https://www.wsj.com/",
+    "xpath": "//*[contains(@class, 'wsj-headline')]"
+  }
+]
