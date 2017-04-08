@@ -11,8 +11,6 @@ except AttributeError:
 else:
     ssl._create_default_https_context = _create_unverified_https_context
 
-nltk.download('vader_lexicon')
-
 def generatesentiment(k, text):
     sid = SentimentIntensityAnalyzer()
     score = sid.polarity_scores(text)
