@@ -9,6 +9,7 @@ from scraper import getheadlines, getheadlines_JS
 from textanalyser import generatesentiment
 import boto
 from time import gmtime, strftime
+import sys
 
 
 # In[70]:
@@ -61,8 +62,28 @@ def generateheadlinefile(source_file, output_file, s3key, scraperfn):
 
 # In[71]:
 
-generateheadlinefile('data/news_sources_au.json', 'data-au.json', "au", getheadlines)
-generateheadlinefile('data/news_sources_us.json', 'data-us.json', 'us', getheadlines_JS)
+def au():
+  generateheadlinefile('data/news_sources_au.json', 'data-au.json', "au", getheadlines)
+
+def us():
+  generateheadlinefile('data/news_sources_us.json', 'data-us.json', 'us', getheadlines_JS)
+
+def default():
+  au()
+  us()
+
+run_options = {
+  'au' : au,
+  'us' : us,
+  'all' : default
+}
+
+try:
+  run = sys.argv[1]
+except IndexError:
+  run = 'all'
+
+run_options[run]()
 
 
 # In[ ]:
