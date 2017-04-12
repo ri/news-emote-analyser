@@ -2,7 +2,7 @@
   {
     "name": "New York Times",
     "url": "https://www.nytimes.com/",
-    "xpath": "//*[contains(@class, 'story-heading')]"
+    "xpath": "//*[contains(@class, 'story-heading')]/a"
   },
   {
     "name": "Fox News",
@@ -17,7 +17,7 @@
   {
     "name": "Huffington Post",
     "url": "http://www.huffingtonpost.com/?country=US",
-    "xpath": "//*[contains(@class, 'card__headline')]|//*[contains(@class, 'splash__header--title')]"
+    "xpath": "//*[contains(@class, 'card__headlines')]//*[contains(@class, 'card__headline')]|//*[contains(@class, 'splash__header--title')]"
   },
   {
     "name": "Wall Street Journal",
