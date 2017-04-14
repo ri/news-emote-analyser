@@ -7,7 +7,7 @@
   {
     "name": "Fox News",
     "url": "http://www.foxnews.com/",
-    "xpath":  "//*[contains(@id, 'latest')]//li//a|//*[contains(@class, 'related')]//li//a|//*[contains(@class, 'mkt-rel')]//li//a|//h3//a|//*[contains(@class, 'article-ct')]//a//h3|//h1//a"
+    "xpath":  "//*[contains(@id, 'latest')]//li//a|//*[contains(@class, 'related')]//li//a|//*[contains(@class, 'mkt-rel')]//li//a|//h3//a|//*[contains(@class, 'top-stories')]//a//h3|//*[contains(@class, 'article-ct')]//a//h3|//*[contains(@class, 'primary')]//h1//a"
   },
   {
     "name": "CNN",
