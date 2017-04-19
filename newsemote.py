@@ -18,7 +18,7 @@ def generateheadlinefile(source_file, output_file, s3key, scraperfn):
     with open(source_file) as data_file:
         sources = json.load(data_file)
         data = {}
-        data["time"] = time.strftime("%c")
+        data["time"] = time.strftime("%c %Z")
         data["news-data"] = []
 
     for source in sources:
