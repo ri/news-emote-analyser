@@ -8,7 +8,7 @@ from collections import OrderedDict
 def formatheadline(headline): return re.sub('\s+',' ', headline.lstrip())
 
 def uniquelist(l):
-    return list(OrderedDict.fromkeys(l))
+    return list(filter(None, OrderedDict.fromkeys(l)))
 
 def getheadlines(url, xpath):
     client = requests.get(url)
