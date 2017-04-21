@@ -22,9 +22,9 @@ def generateheadlinefile(source_file, output_file, s3key, scraperfn):
         data["news-data"] = []
 
     for source in sources:
-        headlines = scraperfn(source["url"], source["xpath"])
+        print(source)
+        headlines = scraperfn(source["url"], source["xpath"], source.get("remove"))
         sentiments = [generatesentiment("headline", headline) for headline in headlines]
-        print(sentiments)
 
         data["news-data"].append({
             "name": source["name"],
@@ -65,6 +65,9 @@ def generateheadlinefile(source_file, output_file, s3key, scraperfn):
 def au():
   generateheadlinefile('data/news_sources_au.json', 'data-au.json', "au", getheadlines)
 
+def uk():
+  generateheadlinefile('data/news_sources_uk.json', 'data-uk.json', "uk", getheadlines)
+
 def us():
   generateheadlinefile('data/news_sources_us.json', 'data-us.json', 'us', getheadlines_JS)
 
@@ -74,6 +77,7 @@ def default():
 
 run_options = {
   'au' : au,
+  'uk' : uk,
   'us' : us,
   'all' : default
 }

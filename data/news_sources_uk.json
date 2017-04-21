@@ -1,0 +1,28 @@
+[
+  {
+    "name": "BBC News",
+    "url": "http://www.bbc.com/news",
+    "xpath": "//*[contains(@class, 'gs-c-promo-heading')]//h3|//*[contains(@class, 'title-link__title-text')]|//*[contains(@class, 'bold-image-promo__title')]"
+  },
+  {
+    "name": "The Guardian",
+    "url": "https://www.theguardian.com/uk",
+    "xpath": "//a[contains(@class, 'js-headline-text')]"
+  },
+  {
+    "name": "The Telegraph",
+    "url": "http://www.telegraph.co.uk/",
+    "xpath": "//h3//a|//a//h3//*[contains(@class, 'list-of-entities__item-headline-text')]",
+    "remove": "//span[contains(@class, 'list-of-entities__item-title-prfix')]"
+  },
+  {
+    "name": "Mirror",
+    "url": "http://www.mirror.co.uk/",
+    "xpath": "//strong//a"
+  },
+  {
+    "name": "Mail Online",
+    "url": "http://www.dailymail.co.uk/home/index.html",
+    "xpath": "//*[contains(@class, 'article')]/h2"
+  }
+]
