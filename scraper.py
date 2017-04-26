@@ -23,7 +23,7 @@ def getheadlines(url, xpath, remove):
 
     return uniquelist([formatheadline(h.text_content()) for h in elements.xpath(xpath)])
 
-def getheadlines_JS(url, xpath):
+def getheadlines_JS(url, xpath, remove):
     browser = webdriver.PhantomJS()
     tree = browser.get(url)
     elements = browser.find_elements_by_xpath(xpath)
